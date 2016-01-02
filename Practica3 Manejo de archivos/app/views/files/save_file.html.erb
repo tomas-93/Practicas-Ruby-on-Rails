@@ -1,0 +1,7 @@
+<h2>Guardar Comentarios</h2>
+<%= form_tag({:controller => "files", :action => "save_file"}, :method => "post") do %>
+    <%= text_area_tag "comment", @comments, :cols => 50, :rows => 10, :required => "required" %>
+    <br/>
+    <%= submit_tag "Guardar comentario", :id =>"commetUp"%>  
+<% end %>
+<p class="botton" style=" width:10%; "><%= link_to "Lista de archivos", :controller => "files", :action => "list_file" %></p>

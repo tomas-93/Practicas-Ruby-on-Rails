@@ -1,0 +1,36 @@
+<h2>Archivos</h2>
+<!--MESSAGE -->
+<% if @message %>
+    <div>
+        <strong><%= @message %></strong>
+    </div>
+<% end %>
+<!--Listar Documentos -->
+<ul>
+    <% @urlDirFile.each do |file| %>
+        <% if file == "." or file == ".." then next end %>
+        <li>
+            <strong><%= file %></strong>
+            <a target="_blank" href="/files/<%= file %>" >Ver archivo</a>
+
+            <%= link_to "Borrar Archivo", 
+            {
+                :controller => "files", 
+                :action => "delete_file",
+                :name_file => file,
+            },
+            {
+                :method => "post",
+                :confirm => "Seguro?"
+            } %>
+        </li>
+    <% end %>
+</ul>
+<!--Link para subir archivo-->
+<p class="botton"> <%= link_to "Subir Archivo", :controoler => "files", :action => "up_file" %> </p>
+<!--comentarios-->
+<h2>Ultimos Comentarios</h2>
+<div >
+    <pre><%= @comments %></pre>
+    <p class="botton"><%=link_to "Comentario", :controller => "files", :action => "save_file" %></p>
+</div>

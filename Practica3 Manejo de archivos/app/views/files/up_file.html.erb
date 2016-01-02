@@ -1,0 +1,10 @@
+<h2>Subir Documento</h2>
+<%= form_tag({:controller => "files", :action => "up_file"}, :multipart => true) do %>
+    <%= file_field_tag "file_in_proccess", :required => "required", :id => "file" %>
+	<%= submit_tag "Subir archivo",  :id =>"commetUp"%>
+<% end %>
+<% if @format %>
+	<p>El formato es incorrecto</p>
+	<p>Solo se aceptan el formato .pdf .doc y .docx</p>
+<% end %>
+<p class="botton" style=" width:20%; "><%= link_to "Volver a la lista de Archivos", :controller => "files", :action => "list_file" %></p>

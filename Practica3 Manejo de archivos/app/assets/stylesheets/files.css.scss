@@ -1,0 +1,87 @@
+// Place all the styles related to the files controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*
+{
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+}
+a
+{
+    color: black;
+}
+div
+{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+html, body
+{
+    height: 100%;
+}
+h2
+{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+p
+{
+    margin: 10px;
+    width: 8%;    
+}
+li
+{
+    margin: 10px;
+    padding: 1%;
+}
+li strong
+{
+    padding: 1%;
+    width: 30%;
+}
+li a
+{
+    padding: 1%;
+    width: 30%;
+}
+pre
+{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 1%;
+}
+textarea
+{
+    padding: 1%;
+    margin: 1%;
+    width: 96%;
+}
+#commetUp
+{
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 1%;
+    width: 20%;
+}
+#file
+{
+    font-weight: bold;
+    padding: 10px;
+    margin: 1%;
+    width: 90%;
+}
+.botton
+{
+    background-color: #2196F3;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 1%;
+}
+.botton:active
+{
+    background-color: #EFEFEF
+}
