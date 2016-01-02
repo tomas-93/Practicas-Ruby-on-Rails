@@ -1,0 +1,14 @@
+<% if @user %>
+    <h2> Bienvenido usuarios <%= @user %></h2>
+    <p>Ejemplo de cookies, el cookie[:user]</p>
+    <%= form_tag({:controller => "test_cookies", :action => "identify"}, :method => "post") do %>
+    <p><%= submit_tag "Borrar sesion", id:"submit", style:"width: 20%;"%></p>
+    <% end %>
+<% else %>
+    <h2>Bienvenido</h2>
+    <p>Ejemplo de cookies</p>
+    <%= form_tag({:controller => "test_cookies", :action => "identify"}, :method => "post") do %>
+        <p><%= text_field "User", "", placeholder: "User",:required => "required"%></p>
+        <p><%= submit_tag "Login", id:"submit"%></p>
+    <% end %>
+<% end %>

@@ -1,0 +1,5 @@
+<p>Incicio sesion:  <%= session[:user]%></p>
+<p>Nombre: <%= session[:name] %></p>
+<p>Apellido: <%= session[:surname] %></p>
+<p>Login: <%= session[:log]%></p>
+<%= link_to "Cerrar sesion", :contoller => "test_sesion", :action => "close" %>
