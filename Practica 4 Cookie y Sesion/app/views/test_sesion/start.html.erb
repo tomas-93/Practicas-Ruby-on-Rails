@@ -1,6 +1,0 @@
-<%= form_tag({:controoler => "test_sesion", :action => "start"}, :method => "post") do %>
-    <h2>Login</h2>
-    <p><%= text_field_tag "user","", placeholder: "Usuario" %></p>
-    <p><%= password_field_tag :password, "", placeholder: "Password"%></p>
-    <p><%= submit_tag "Inciar Sesion", style:"width: 20%;"%></p>
-<% end %>
