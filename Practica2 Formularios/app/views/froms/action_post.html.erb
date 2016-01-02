@@ -1,0 +1,15 @@
+<h3>Fromularios usando el metodo POST</h3>
+<%= form_tag({:controller => "froms", :action => "action_post"}, :method => "post") do %>
+<!---<%= label_tag "codigo", "Codigo usuario" %>-->
+<%= text_field_tag "code","", :size => 20, :maxlenght => 5, :placeholder => "Numero de Usuario" %>
+<%= text_field_tag "name","", :size => 20, :maxlenght => 30, :placeholder => "Nombre completo" %>
+<%= text_field_tag "surname","", :size =>20, :maxlenght => 30, :placeholder => "Apellidos"%>
+<%= text_field_tag "age","", :size => 20, :maxlenght => 30, :placeholder => "Edad" %>
+<%= submit_tag "Enviar", :id => "submit"%>
+<% end %>
+<div id="response">
+    <p><%= @id %></p>
+    <p><%= @name %></p>
+    <p><%= @surname %></p>
+    <p><%= @age %></p>
+</div>

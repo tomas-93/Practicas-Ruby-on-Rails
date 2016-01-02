@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practica2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="conteiner">
+        <header>
+            <h1>Formularios</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <%= link_to "Formulario por POST", :controller => "froms", :action => "action_post" %>
+                </li>
+                <li>
+                    <%= link_to "Formulario por GET", :controller => "froms", :action => "action_get" %>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <%= yield %>
+        </section>
+    </div>
+</body>
+</html>
