@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body
+{
+	background-color: #D4ECF8;
+}
+header
+{
+	text-align: center;
+}
+img
+{
+	height: 50px;
+	width: 50px;
+}
+nav a 
+{
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+nav ul
+{
+	width: 450px;
+	margin: 0px auto 0px auto;
+}
+nav .google_plus
+{
+	background-image: url(/assets/logo_google.jpg);
+	height: 10px;
+	width: 10px;
+}
+nav .facebook
+{
+	background-image: url(/assets/logo_face.png);
+	height: 10px;
+	width: 10px;
+}
+nav .twitter
+{
+	background-image: url(/assets/logo_twitter.png);
+	height: 10px;
+	width: 10px;
+}
+section .image_logo
+{
+	float: left;
+	width: auto;
+}
+section .description
+{
+	text-align: justify;
+}
+li
+{
+	list-style-type: none;
+	display: inline;
+	padding: 5px;
+}
+.clear
+{
+	clear: both;
+}
+#conteiner
+{
+	background-color: #FFFFFF;
+	width: 900px;
+	margin: 0px auto 0px auto;
+	padding: 10px;
+	border: solid 1px #CCCCCC;
+	box-shadow: 1px 1px 5px #000000;
+	-moz-box-shadow: 1px 1px 5px #000000;
+	-webkit-box-shadow: 1px 1px 5px #000000;
+}
