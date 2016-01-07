@@ -1,0 +1,9 @@
+<h2>Editar Tareas</h2>
+
+<%=form_tag({:controller => "talks", :action => "edit"}, :method => "post") do %>
+    <p><%= text_field_tag "name", @task.name,:placeholder => "Nombre de la Tarea"%></p>
+    <p><%= text_area_tag "content", @task.content, :placeholder => "Descripcion"%></p>
+    <P><%= date_field_tag "date", @task.date %></P>
+    <P><%= submit_tag "Guardar", style: "width: 20%;"%></P>
+    <%= hidden_field_tag 'var', @task.id %>
+<% end %>

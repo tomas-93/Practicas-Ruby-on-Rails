@@ -1,0 +1,22 @@
+<h2>Lista de Tareas</h2>
+<%if @flag %>
+    <h3>Se elimino la tarea, <%= @name%></h3>
+<% end %>
+<% if @listElement.length < 1 %>  
+<h3 style="text-align: center; margin-top: 10px;">No hay tareas :( </h3>
+<% end %>
+<% if @listElement %>
+    <% @listElement.each do |element| %>
+        <div class="talk">
+            <%=content_tag :p, :id => "p", :style => "color: brown; font-weight: bold;" do element.name; end %> 
+            <%=content_tag :p, :id => "p" do element.content end %>
+            <%=content_tag :p, :id => "p" do element.date end %>
+            <%=link_to({:controller => "talks", :action => "remove", :name => element.name , :var => element.id},{:class => "image", :style => "float: left;"}) do%>
+            <%=image_tag("remove.png", :style =>"float: left;") %>
+            <% end %>
+            <%=link_to({:controller =>"talks", :action => "edit", :var => element.id}, {:class => "image", :style => "float: right;", :method => "put"}) do%>
+            <%=image_tag("edit.png", :style => "float: right;") %>
+            <% end %>
+        </div>
+    <% end %>
+<% end %>

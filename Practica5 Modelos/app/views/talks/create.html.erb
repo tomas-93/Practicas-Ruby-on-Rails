@@ -1,0 +1,16 @@
+<h2>Crear Tarea</h2>
+<%=form_tag({:controller => "talks", :action => "create"}, :method => "post") do %>
+    <p><%= text_field_tag "name","",:placeholder => "Nombre de la Tarea"%></p>
+    <p><%= text_area_tag "description", "", :placeholder => "Descripcion"%></p>
+    <P><%= date_field_tag "date", "01/01/2016"%></P>
+    <P><%= submit_tag "Crear Tarea", style: "width: 20%;"%></P>
+<% end %>
+<% if @talk != nil and @talk.errors.full_messages? %>
+    <ul>
+        <% @talk.full_message.each do |message| %>
+            <li>
+                <%= message %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>

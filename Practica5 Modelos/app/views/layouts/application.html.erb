@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practica5</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="conteiner">
+    <header>
+        <h1>Tareas :D</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <%=link_to "Crear Una Tarea", :controller => "talks", :action =>"create" %>
+            </li>
+            <li>
+                <%= link_to "Lista De Tareas", :controller => "talks", :action => "list" %>
+            </li>
+        </ul>
+    </nav>
+    <div id="yield">
+        <%= yield %>
+    </div>
+</div>
+</body>
+</html>
